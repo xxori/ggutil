@@ -13,3 +13,6 @@ commands:
   info:
     description: Shows information about the server
     usage: /info
+  giverewards:
+    description: Gives daily reward
+    usage: /giverewards <user>
