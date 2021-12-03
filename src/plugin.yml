@@ -1,0 +1,12 @@
+name: ggutil
+version: 1.0
+author: xxori
+main: io.github.xxori.ggutil.ggutil
+api-version: 1.18
+commands:
+  spawn:
+    description: Teleports you to the spawn world
+    usage: /spawn
+  help:
+    description: Custom help message for GIHS Gaming Server
+    usage: /help
