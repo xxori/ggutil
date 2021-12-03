@@ -14,14 +14,17 @@ public class spawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
+            // Console cannot /spawn
             Bukkit.getLogger().info(ChatColor.RED+"You can only run this command as a player!");
             return true;
         }
         Player p = (Player)sender;
         World spawnWorld = Bukkit.getServer().getWorld("world_spawn");
         if (spawnWorld == null) {
+            // Sus
             return true;
         }
+        // Send to the spawn world
         p.teleport(spawnWorld.getSpawnLocation());
         sender.sendMessage(ChatColor.GRAY + "Teleporting to " + ChatColor.GREEN + " world_spawn");
         return true;

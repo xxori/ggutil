@@ -10,3 +10,6 @@ commands:
   help:
     description: Custom help message for GIHS Gaming Server
     usage: /help
+  info:
+    description: Shows information about the server
+    usage: /info
