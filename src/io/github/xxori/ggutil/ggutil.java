@@ -32,7 +32,7 @@ public class ggutil extends JavaPlugin {
         this.getCommand("help").setExecutor(new help(this));
         this.getCommand("info").setExecutor(new info(this));
         this.getCommand("giverewards").setExecutor(new giverewards(this));
-        //this.getCommand("sus").setExecutor(new sus(this));
+        this.getCommand("sus").setExecutor(new sus(this));
         Bukkit.getServer().getPluginManager().registerEvents(new spawnListener(), this);
     }
 
@@ -46,8 +46,8 @@ public class ggutil extends JavaPlugin {
     }
 
     private void loadHooks() {
-        /*if (Bukkit.getPluginManager().isPluginEnabled("SkinsRestorer")) {
+        if (Bukkit.getPluginManager().isPluginEnabled("SkinsRestorer")) {
             enabledHooks.add(new SkinsRestorerHook(this));
-        }*/
+        }
     }
 }

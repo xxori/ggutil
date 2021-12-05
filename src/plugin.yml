@@ -3,6 +3,7 @@ version: 1.0
 author: xxori
 main: io.github.xxori.ggutil.ggutil
 api-version: 1.18
+softdepend: [ SkinsRestorer ]
 commands:
   spawn:
     description: Teleports you to the spawn world
@@ -16,3 +17,6 @@ commands:
   giverewards:
     description: Gives daily reward
     usage: /giverewards <user>
+  sus:
+    description: sus
+    usage: /sus

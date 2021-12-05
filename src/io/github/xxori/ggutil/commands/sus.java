@@ -4,6 +4,7 @@ import io.github.xxori.ggutil.ggutil;
 import io.github.xxori.ggutil.hooks.SkinsRestorerHook;
 import io.github.xxori.ggutil.hooks.ggutilHook;
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,12 +23,15 @@ public class sus implements CommandExecutor {
         randomGenerator = new Random();
         this.plugin = plugin;
         amoguses = new ArrayList<>();
-        amoguses.add("https://i.imgur.com/QXzeCMY.png");
-        amoguses.add("https://i.imgur.com/4Sp4gYq.png");
-        amoguses.add("https://i.imgur.com/3AtRhq5.png");
-        amoguses.add("https://i.imgur.com/jYz9Adf.png");
-        amoguses.add("https://i.imgur.com/XLDRGWd.png");
-        amoguses.add("https://i.imgur.com/bdjaPun.png");
+        amoguses.add("https://i.imgur.com/nMM1ApA.png");
+        amoguses.add("https://i.imgur.com/08BHnNw.png");
+        amoguses.add("https://i.imgur.com/hKpRklI.png");
+        amoguses.add("https://i.imgur.com/spGlEOd.png");
+        amoguses.add("https://i.imgur.com/9CmWkvq.png");
+        amoguses.add("https://i.imgur.com/TIfyZoI.png");
+        amoguses.add("https://i.imgur.com/nTefeZF.png");
+        amoguses.add("https://i.imgur.com/suc1uya.png");
+        amoguses.add("https://i.imgur.com/1AJmh9L.png");
     }
 
     @Override
@@ -44,9 +48,15 @@ public class sus implements CommandExecutor {
             }
         }
         Player p = (Player) sender;
-        //p.playSound(p.getLocation(), "amogus-1", 500, 1);
+        int r = randomGenerator.nextInt(2);
+        if (r == 1) {
+            p.playSound(p.getLocation(), Sound.MUSIC_DISC_MALL, 1000, 1);
+        } else {
+            p.playSound(p.getLocation(), Sound.MUSIC_DISC_WAIT, 500, 1);
+        }
         if (any) {
-            boolean result = hook.SetSkin(p, amoguses.get(randomGenerator.nextInt(amoguses.size())));
+            boolean result = hook.SetSkin(p,amoguses.get(randomGenerator.nextInt(amoguses.size())));
+
             if (!result) {
                 plugin.getLogger().info("sus");
             }
