@@ -21,20 +21,20 @@ public class SkinsRestorerHook implements ggutilHook{
     }
 
     public boolean SetSkin(Player player, String skin) {
-       // try {
+        try {
             // Set the skin
-            //skinsRestorerAPI.setSkin(player.getName(), skin);
+            skinsRestorerAPI.setSkinName(player.getName(), skin);
 
 
-            Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "skin set "+ player.getName()+" "+skin);
+            //Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "skin set "+ player.getName()+" "+skin);
 
             // Force skin refresh for player
-            //skinsRestorerAPI.applySkin(new PlayerWrapper(player));
+            skinsRestorerAPI.applySkin(new PlayerWrapper(player));
             return true;
-        /*} catch (SkinRequestException e) {
+        } catch (SkinRequestException e) {
             plugin.getLogger().warning(e.toString());
             return false;
-        }*/
+        }
     }
 
     @Override

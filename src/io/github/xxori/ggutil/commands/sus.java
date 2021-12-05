@@ -23,7 +23,7 @@ public class sus implements CommandExecutor {
         randomGenerator = new Random();
         this.plugin = plugin;
         amoguses = new ArrayList<>();
-        amoguses.add("https://i.imgur.com/nMM1ApA.png");
+        /*amoguses.add("https://i.imgur.com/nMM1ApA.png");
         amoguses.add("https://i.imgur.com/08BHnNw.png");
         amoguses.add("https://i.imgur.com/hKpRklI.png");
         amoguses.add("https://i.imgur.com/spGlEOd.png");
@@ -31,7 +31,16 @@ public class sus implements CommandExecutor {
         amoguses.add("https://i.imgur.com/TIfyZoI.png");
         amoguses.add("https://i.imgur.com/nTefeZF.png");
         amoguses.add("https://i.imgur.com/suc1uya.png");
-        amoguses.add("https://i.imgur.com/1AJmh9L.png");
+        amoguses.add("https://i.imgur.com/1AJmh9L.png");*/
+        amoguses.add("purple");
+        amoguses.add("white");
+        amoguses.add("black");
+        amoguses.add("yellow");
+        amoguses.add("orange");
+        amoguses.add("pink");
+        amoguses.add("green");
+        amoguses.add("blue");
+        amoguses.add("red");
     }
 
     @Override
